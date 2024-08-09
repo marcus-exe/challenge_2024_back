@@ -1,8 +1,13 @@
 package fiap.com.example.challenge.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.UUID;
 
+@Entity
 public class Address {
+    @Id
     private UUID addressId;
     private String street;
     private String neighborhood;
