@@ -1,9 +1,14 @@
 package fiap.com.example.challenge.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Entity
 public abstract class Employee {
+    @Id
     private UUID id;
     private String firstName;
     private String lastName;
@@ -13,22 +18,13 @@ public abstract class Employee {
     private final LocalDateTime registerDate;
     private EmployeeFunction employeeFunction;
 
-    public Employee(String firstName, String lastName, String email, String password, String phone, EmployeeFunction employeeFunction) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-        this.employeeFunction = employeeFunction;
+    public Employee() {
+        this.id = UUID.randomUUID();
         this.registerDate = LocalDateTime.now();
     }
 
     public UUID getId() {
         return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public LocalDateTime getRegisterDate() {
