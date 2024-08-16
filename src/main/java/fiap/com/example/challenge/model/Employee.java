@@ -1,5 +1,6 @@
 package fiap.com.example.challenge.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -10,12 +11,18 @@ import java.util.UUID;
 public class Employee {
     @Id
     private UUID id;
+    @Column(nullable = false)
     private String firstName;
+    @Column(nullable = false)
     private String lastName;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private String password;
     private String phone;
+    @Column(nullable = false)
     private final LocalDateTime registerDate;
+    @Column(nullable = false)
     private EmployeeFunction employeeFunction;
 
     public Employee() {

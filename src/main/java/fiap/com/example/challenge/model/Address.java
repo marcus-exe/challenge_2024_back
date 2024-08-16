@@ -1,5 +1,6 @@
 package fiap.com.example.challenge.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -9,11 +10,17 @@ import java.util.UUID;
 public class Address {
     @Id
     private UUID addressId;
+    @Column(nullable = false)
     private String street;
+    @Column(nullable = false)
     private String neighborhood;
+    @Column(nullable = false)
     private int number;
+    @Column(nullable = false)
     private String city;
+    @Column(nullable = false)
     private String uf;
+    @Column(nullable = false)
     private String cep;
 
     public Address() {

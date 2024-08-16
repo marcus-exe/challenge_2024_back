@@ -2,12 +2,14 @@ package fiap.com.example.challenge.service;
 
 import fiap.com.example.challenge.model.Task;
 import fiap.com.example.challenge.repository.TaskRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class TaskService {
+    @Autowired
     private final TaskRepository taskRepository;
 
     public TaskService(TaskRepository taskRepository) {
@@ -21,4 +23,9 @@ public class TaskService {
     public Task saveTask(Task task) {
         return taskRepository.save(task);
     }
+
+    public List<String> findTop3BySymptomOrDescription(String searchTerm) {
+        return taskRepository.findTop3BySymptomOrDescription(searchTerm);
+    }
+
 }
