@@ -21,7 +21,7 @@
             const cep = document.getElementById('cep').value;
             const resultDiv = document.getElementById('result');
 
-            fetch(`/address?cep=${cep}`)
+            fetch(`/api/address/fetch?cep=${cep}`)
                 .then(response => response.json())
                 .then(data => {
                     // Render JSON response
