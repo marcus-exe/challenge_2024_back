@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-public abstract class Employee {
+public class Employee {
     @Id
     private UUID id;
     private String firstName;
