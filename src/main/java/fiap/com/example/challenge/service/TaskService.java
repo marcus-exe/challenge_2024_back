@@ -25,7 +25,11 @@ public class TaskService {
     }
 
     public List<String> findTop3BySymptomOrDescription(String searchTerm) {
-        return taskRepository.findTop3BySymptomOrDescription(searchTerm);
+        List<String> resolutions = taskRepository.findTop3BySymptomOrDescription(searchTerm);
+        if (resolutions.isEmpty()) {
+            resolutions = taskRepository.findRandomResolutions();
+        }
+        return resolutions;
     }
 
 }
