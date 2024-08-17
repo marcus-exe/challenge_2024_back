@@ -11,9 +11,10 @@ import java.util.UUID;
 public class Chat {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "employee_id", nullable = false)
     private UUID employeeId;
 
     @Column(name = "start_timestamp", nullable = false)

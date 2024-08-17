@@ -9,6 +9,7 @@ import java.util.UUID;
 @Entity
 public class Address {
     @Id
+    @Column(name = "address_id")
     private UUID addressId;
     @Column(nullable = false)
     private String street;

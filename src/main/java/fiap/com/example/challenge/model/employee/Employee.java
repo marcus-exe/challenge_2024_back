@@ -1,8 +1,6 @@
 package fiap.com.example.challenge.model.employee;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -24,6 +22,9 @@ public class Employee {
     private final LocalDateTime registerDate;
     @Column(nullable = false)
     private EmployeeFunction employeeFunction;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id", nullable = false)
+    private Address address;
 
     public Employee() {
         this.id = UUID.randomUUID();
