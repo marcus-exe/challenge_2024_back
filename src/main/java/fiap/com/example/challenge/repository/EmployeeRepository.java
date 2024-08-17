@@ -1,6 +1,6 @@
 package fiap.com.example.challenge.repository;
 
-import fiap.com.example.challenge.model.Employee;
+import fiap.com.example.challenge.model.employee.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

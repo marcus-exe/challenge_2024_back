@@ -1,6 +1,6 @@
 package fiap.com.example.challenge.service;
 
-import fiap.com.example.challenge.model.Address;
+import fiap.com.example.challenge.model.employee.Address;
 import fiap.com.example.challenge.repository.AddressRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

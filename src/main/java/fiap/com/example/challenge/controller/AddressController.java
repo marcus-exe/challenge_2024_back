@@ -1,6 +1,6 @@
 package fiap.com.example.challenge.controller;
 
-import fiap.com.example.challenge.model.Address;
+import fiap.com.example.challenge.model.employee.Address;
 import fiap.com.example.challenge.service.AddressService;
 import fiap.com.example.challenge.service.ApiService;
 import org.springframework.beans.factory.annotation.Autowired;

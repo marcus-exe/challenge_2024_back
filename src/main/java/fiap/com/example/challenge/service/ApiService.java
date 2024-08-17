@@ -1,7 +1,7 @@
 package fiap.com.example.challenge.service;
 
 import fiap.com.example.challenge.dto.AddressDTO;
-import fiap.com.example.challenge.model.Address;
+import fiap.com.example.challenge.model.employee.Address;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

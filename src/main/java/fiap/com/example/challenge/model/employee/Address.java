@@ -1,4 +1,4 @@
-package fiap.com.example.challenge.model;
+package fiap.com.example.challenge.model.employee;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

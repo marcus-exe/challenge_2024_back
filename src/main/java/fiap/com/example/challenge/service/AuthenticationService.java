@@ -1,6 +1,6 @@
 package fiap.com.example.challenge.service;
 
-import fiap.com.example.challenge.model.Employee;
+import fiap.com.example.challenge.model.employee.Employee;
 import fiap.com.example.challenge.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
