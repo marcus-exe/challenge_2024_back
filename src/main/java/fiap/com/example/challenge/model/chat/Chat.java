@@ -1,5 +1,6 @@
 package fiap.com.example.challenge.model.chat;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -28,6 +29,7 @@ public class Chat {
     private ChatStatus status;
 
     @OneToMany(mappedBy = "chat", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Message> messages = new ArrayList<>();
 
     public Chat() {}

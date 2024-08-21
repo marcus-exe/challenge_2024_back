@@ -1,5 +1,6 @@
 package fiap.com.example.challenge.model.chat;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -13,6 +14,7 @@ public class Message {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "chat_id", nullable = false)
+    @JsonBackReference
     private Chat chat;
 
     @Column(name = "sender_type", nullable = false)

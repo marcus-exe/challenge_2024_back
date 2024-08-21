@@ -45,6 +45,9 @@ public class ChatService {
         }
     }
 
+    public Optional<Chat> getChatById(UUID chatId) {
+        return chatRepository.findById(chatId);
+    }
 
     public List<Chat> getChatsByEmployeeId(UUID employeeId) {
         return chatRepository.findByEmployeeId(employeeId);
