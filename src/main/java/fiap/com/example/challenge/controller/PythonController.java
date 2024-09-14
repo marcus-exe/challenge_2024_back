@@ -2,19 +2,23 @@ package fiap.com.example.challenge.controller;
 
 import fiap.com.example.challenge.service.PythonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
+@RequestMapping("/gemini-api")
 public class PythonController {
 
+    private final PythonService pythonService;
+
     @Autowired
-    private PythonService pythonService;
+    public PythonController(PythonService pythonService) {
+        this.pythonService = pythonService;
+    }
 
-    @GetMapping("/run-python")
-    public String runPython(@RequestParam String argument) {
-
-        return argument;
+    @PostMapping("/submit")
+    public String submitJson(@RequestBody Map<String, Object> jsonData) {
+        return pythonService.submitService(jsonData);
     }
 }
