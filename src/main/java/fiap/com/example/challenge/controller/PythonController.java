@@ -14,6 +14,7 @@ public class PythonController {
 
     @GetMapping("/run-python")
     public String runPython(@RequestParam String argument) {
-        return pythonService.runPythonScript(argument);
+
+        return argument;
     }
 }
