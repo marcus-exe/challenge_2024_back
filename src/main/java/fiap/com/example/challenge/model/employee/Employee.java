@@ -23,7 +23,7 @@ public class Employee {
     @Column(nullable = false)
     private EmployeeFunction employeeFunction;
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "address_id", nullable = false)
+    @JoinColumn(name = "address_id")
     private Address address;
 
     public Employee() {
