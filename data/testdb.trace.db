@@ -8683,3 +8683,6 @@ ALTER TABLE HISTORICO_PRECOS
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-09-17 05:56:49.897445-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HISTORICO_PRECO" not found; SQL statement:
+DROP TABLE HISTORICO_PRECO [42102-224]
