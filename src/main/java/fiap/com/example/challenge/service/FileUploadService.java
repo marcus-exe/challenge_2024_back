@@ -13,8 +13,6 @@ import java.util.List;
 @Service
 public class FileUploadService {
 
-    private final String UPLOAD_DIR = "uploads/";
-
     // Valid file extensions
     private final List<String> ALLOWED_EXTENSIONS = Arrays.asList("txt", "pdf", "json", "docx");
 
@@ -26,6 +24,7 @@ public class FileUploadService {
         }
 
         // Ensure the upload directory exists
+        String UPLOAD_DIR = "uploads/";
         Path uploadPath = Paths.get(UPLOAD_DIR);
         if (!Files.exists(uploadPath)) {
             Files.createDirectories(uploadPath);
